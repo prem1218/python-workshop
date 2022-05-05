@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                archiveArtifacts artifacts: 'pythonSchedule.zip' allowEmptyArchive: true
+                archiveArtifacts artifacts: 'pythonSchedule.zip'
             }
         }
         stage('Build Docker Image') {
