@@ -1,13 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Running build automation'
-                archiveArtifacts artifacts: 'dist/pythonSchedule.zip'
-                
-            }
-        }
+        
         stage('Build Docker Image') {
             when {
                 branch 'master'
