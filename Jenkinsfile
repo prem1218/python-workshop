@@ -9,8 +9,7 @@ pipeline {
             steps {
                 script {
                     app = docker.build("premcloud18/python-schedule")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
+                    
                     }
                 }
             }
